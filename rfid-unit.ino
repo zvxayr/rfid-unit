@@ -85,7 +85,9 @@ void loop() {
     
     String action = Serial.readStringUntil('\n');
 
-    if (action.equals("accept")) {
+    if (action.equals("unknown")) {
+      state = ALL;
+    } else if (action.equals("accept")) {
       state = GREEN;
     } else {
       state = RED;
